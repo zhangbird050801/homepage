@@ -1,0 +1,29 @@
+{# tip #}
+{# title_1 #}
+{# title_2 #}
+{# img #}
+{# bio_1 #}
+{# bio_2 #}
+{# style #}
+{# style_tip #}
+{# link: class, url, name #}
+{% macro product_single(value) %}
+<div class="product-banner" id="{{ value.tip | safe }}"{% if value.style %} style="{{ value.style | safe}}"{% endif %}>
+    <div class="banner-info need-padding">
+      <span class="tips"{% if value.style_tip %} style="{{ value.style_tip | safe}}"{% endif %}>{{ value.tip | safe }}</span>
+      <span class="title">{{ value.title_1 | safe }}<br>{{ value.title_2 }}</span>
+      <div class="banner-discription-group">
+        <span class="description">{{ value.bio_1 | safe }}</span>
+        <span class="description">{{ value.bio_2 | safe }}</span>
+      </div>
+      <div class="link-group">
+        {% for link in value.links %}
+        <a class="{{ link.class }}" href="{{ link.url | safe }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="banner-pic">
+      <img class="banner-pic-img" src="{{ value.img | safe }}" alt="banner image">
+    </div>
+</div>
+{% endmacro %}

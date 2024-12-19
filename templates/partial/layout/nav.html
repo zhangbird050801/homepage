@@ -1,0 +1,61 @@
+{# 电脑端 #}
+<div class="nav top">
+    <div class="nav-content">
+        <div class="nav-left">
+            <a href="javascript:scrollToTopWithAnimation()" class="site-logo">
+                <img src="{{ config.extra.site.logo }}" alt="logo" class="site-logo-img">
+                <span class="site-name">{{ config.author }}</span>
+            </a>
+        </div>
+        <div class="nav-center">
+            {% for menu in config.extra.nav.center.menus %}
+            <a class="nav-item"
+                {% if menu.internal %}
+                href="javascript:homepage.scrollTo('{{ menu.url}}');" 
+                {% else %}
+                href="{{ menu.url}}" target="_blank"
+                {% endif %}
+                >{{ menu.name }}</a>
+            {% endfor %}
+        </div>
+        <div class="nav-right">
+            {% for menu in config.extra.nav.right.menus %}
+            <a class="nav-item"
+                {% if menu.internal %}
+                href="javascript:homepage.scrollTo('{{ menu.url}}}');" 
+                {% else %}
+                href="{{ menu.url}}" target="_blank"
+                {% endif %}
+                >{{ menu.name }}</a>
+            {% endfor %}
+            <a class="nav-menu" id="nav-menu"><span class=" icon-menu-fill"></span></a>
+        </div>
+    </div>
+</div>
+{# 手机端 #}
+<div class="menu-list" id="menu-list">
+    {% for menu in config.extra.nav.right.menus %}
+    <a class="nav-item"
+        {% if menu.internal %}
+        href="javascript:homepage.scrollTo('{{ menu.url}}}');" 
+        {% else %}
+        href="{{ menu.url}}" target="_blank"
+        {% endif %}
+        >{{ menu.name }}</a>
+    {% endfor %}
+    {% for menu in config.extra.nav.center.menus %}
+    <a class="nav-item"
+        {% if menu.internal %}
+        href="javascript:homepage.scrollTo('{{ menu.url}}}');" 
+        {% else %}
+        href="{{ menu.url}}" target="_blank"
+        {% endif %}
+        >{{ menu.name }}</a>
+    {% endfor %}
+</div>
+{% if config.extra.nav.message.enable %}
+<div class="nav-banner">
+    <a class="nav-banner-text" href="{{ config.extra.nav.message.url }}" target="_blank">{{ config.extra.nav.message.text | safe }}<span
+        class=" icon-arrow-right-s-line" style="font-size: 16px;"></span></a>
+</div>
+{% endif %}

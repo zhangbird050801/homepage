@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    {% block head %}
+    {% endblock head %}
+    {% include "partial/layout/head.html" %}
+</head>
+
+<body id="body">
+  {% include "partial/layout/nav.html" %}
+  
+  {% block content %}
+  {% endblock content %}
+
+  {% include "partial/layout/footer.html" %}
+
+  <script src="/js/simpleParallax.min.js"></script>
+  <script src="/js/main.js"></script>
+  {% if config.extra.analytics.umami.enable %}
+  {# 名称改为不易被屏蔽的，统计网站访问量 #}
+  <script defer src="{{ config.extra.analytics.umami.js }}" data-website-id="{{ config.extra.analytics.umami.id }}"
+      {% if config.extra.analytics.umami.remote_url %}data-host-url="{{ config.extra.analytics.umami.remote_url | safe }}"{% endif %}
+      {% if config.extra.analytics.umami.domain %}data-domains="{{ config.extra.analytics.umami.domain | safe }}"{% endif %}>
+  </script>
+  {% endif %}
+</body>
+
+</html>

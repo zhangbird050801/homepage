@@ -1,0 +1,58 @@
+{
+	"md_image": {
+		"scope": "markdown",
+		"prefix": "mdi",
+		"body": [
+			"{{ image(img_name=\"$1\", width=300, alt=\"$2\") }}",
+		],
+		"description": "Zola content markdown image insert macro"
+	},
+	"if": {
+		"scope": "html,django-html",
+		"prefix": "iff",
+		"body": [
+			"{% if $1 %}",
+		],
+		"description": "Tera template if"
+	},
+	"else": {
+		"scope": "html,django-html",
+		"prefix": "ell",
+		"body": [
+			"{% else %}",
+		],
+		"description": "Tera template else"
+	},
+	"%%": {
+		"scope": "html,django-html",
+		"prefix": "qq",
+		"body": [
+			"{% $1 %}",
+		],
+		"description": "Tera template logic"
+	},
+	"{}": {
+		"scope": "html,django-html",
+		"prefix": "ww",
+		"body": [
+			"{{ $1 }}",
+		],
+		"description": "Tera template render"
+	},
+	"##": {
+		"scope": "html,django-html",
+		"prefix": "ee",
+		"body": [
+			"{# $1 #}",
+		],
+		"description": "Tera template comment"
+	},
+	"end": {
+		"scope": "html,django-html",
+		"prefix": "edd",
+		"body": [
+			"{% endif %}",
+		],
+		"description": "Tera template end"
+	}
+}

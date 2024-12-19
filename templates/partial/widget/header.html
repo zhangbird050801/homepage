@@ -1,0 +1,31 @@
+{# title_1 #}
+{# title_2 #}
+{# bio_1: html #}
+{# bio_2: html #}
+{# about_url: #}
+{# cover: #}
+{# links: class_icon, url#}
+{% macro header(value) %}
+<div class="first-stack need-padding">
+    <div class="left-Introduce">
+      <div class="title-group">
+        <span class="title">{{ value.title_1 | safe }}</span>
+        <span class="title">{{ value.title_2 | safe }}</span>
+      </div>
+      <div class="discription">
+        <span class="discription-text">{{ value.bio_1 | safe }}<br>{{ value.bio_2 | safe }}</span>
+      </div>
+      <div class="first-stack-links">
+        <a href="{{ value.about_url | safe }}" class="about-button" target="_blank">了解更多</a>
+        {% for link in value.links %}
+        <a href="{{ link.url | safe }}" class="about-button social-button" target="_blank">
+          <i class="{{ link.class_icon }}"></i>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <a href="{{ value.about_url | safe }}" class="right-stack" target="_blank">
+      <img class="banner-img" src="{{ value.cover | safe }}" alt="banner" title="banner">
+    </a>
+</div>
+{% endmacro %}

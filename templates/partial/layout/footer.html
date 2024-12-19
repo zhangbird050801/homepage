@@ -1,0 +1,15 @@
+{% set start = config.extra.site.start_year | int %}
+{% set current = now() | date(format="%Y") | int %}
+<div class="footer">
+    <div class="footer-content need-padding">
+      <span class="info inline-word">Copyright © <span class="inline-word" id="copyright-info">{% if start != current %}{{ start }} - {% endif %}{{ current }}</span>{{ config.author }} 保留所有权利。</span>
+      <div class="info-group"><a class="info" href="https://beian.miit.gov.cn/" target="_blank">{{ config.extra.site.icp }}</a><a class="info" href="https://github.com/iWangJiaxiang/Homepage-Creators" target="_blank">主题：Homepage Creators</a></div>
+    </div>
+</div>
+{# 动态调整 #}
+<script defer>
+    const startYear = {{ config.extra.site.start_year }};
+    const currentYear = new Date().getFullYear();
+    const copyrightInfo = `${startYear !== currentYear ? startYear + ' - ' : ''}${currentYear}`;
+    document.getElementById('copyright-info').innerHTML = copyrightInfo;
+</script>

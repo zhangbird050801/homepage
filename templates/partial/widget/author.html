@@ -1,0 +1,18 @@
+{# name #}
+{# title #}
+{# avatar #}
+{# bio #}
+{% macro author(value) %}
+<div class="avatar-discription">
+    <span class="avatar-discription-text">
+      <p>
+        {{ value.bio | safe }}
+      </p>
+    </span>
+    <div class="avatar-info">
+      <img loading="lazy" class="avatar-image" src="{{ value.avatar | safe }}">
+      <span class="avatar-name">{{ value.name }}</span>
+      <span class="avatar-title">{{ value.title }}</span>
+    </div>
+  </div>
+{% endmacro %}

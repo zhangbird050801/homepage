@@ -1,0 +1,17 @@
+name = "homepage-creators"
+description = "A fast and beautiful personal homepage for creators, used by https://jiaxiang.wang, a port of HeoWeb."
+license = "AGPL"
+homepage = "https://github.com/iWangJiaxiang/homepage-for-creators"
+min_version = "0.19.2"
+demo = "https://jiaxiang.wang/"
+
+[author]
+name = "Jiaxiang Wang"
+homepage = "https://blog.jiaxiang.wang"
+
+[original]
+author =  "Heo Hong Zhang"
+homepage = "https://github.com/zhheo"
+repo = "https://github.com/zhheo/HeoWeb"
+
+[extra]

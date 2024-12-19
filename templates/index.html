@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macro %}
+
+{% block head %}
+    {{ macro::head_meta_original_title(_permalink = section.path, excerpt = section.description | default(value= section.title ~ " | " ~ config.description), type = 'website') }}
+{% endblock %}
+
+{% block content %}
+
+    {% for widget in config.extra.index.widgets %}
+    {{ macro::render_widget(widget=widget.type, value=widget.value) }}
+    {% endfor %}
+
+{% endblock content %}
