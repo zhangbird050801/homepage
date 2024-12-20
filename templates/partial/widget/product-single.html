@@ -1,6 +1,5 @@
 {# tip #}
-{# title_1 #}
-{# title_2 #}
+{# title #}
 {# img #}
 {# bio_1 #}
 {# bio_2 #}
@@ -11,10 +10,10 @@
 <div class="product-banner" id="{{ value.tip | safe }}"{% if value.style %} style="{{ value.style | safe}}"{% endif %}>
     <div class="banner-info need-padding">
       <span class="tips"{% if value.style_tip %} style="{{ value.style_tip | safe}}"{% endif %}>{{ value.tip | safe }}</span>
-      <span class="title">{{ value.title_1 | safe }}<br>{{ value.title_2 }}</span>
+      <span class="title">{{ value.title | safe }}</span>
       <div class="banner-discription-group">
-        <span class="description">{{ value.bio_1 | safe }}</span>
-        <span class="description">{{ value.bio_2 | safe }}</span>
+        {% if value.bio_1 %}<span class="description">{{ value.bio_1 | safe }}</span>{% endif %}
+        {% if value.bio_2 %}<span class="description">{{ value.bio_2 | safe }}</span>{% endif %}
       </div>
       <div class="link-group">
         {% for link in value.links %}
