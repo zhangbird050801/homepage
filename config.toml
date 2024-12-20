@@ -25,6 +25,8 @@ highlight_code = false
 [extra.site]
 start_year = 2024
 logo = "/img/logo.webp"
+# default to use logo value
+nav_logo = "/img/logo.webp"
 icp = "ICP备XXXXXXXX号"
 
 # umami 访问量统计

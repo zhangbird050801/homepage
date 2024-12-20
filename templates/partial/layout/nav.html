@@ -3,7 +3,7 @@
     <div class="nav-content">
         <div class="nav-left">
             <a href="javascript:scrollToTopWithAnimation()" class="site-logo">
-                <img src="{{ config.extra.site.logo }}" alt="logo" class="site-logo-img">
+                <img src="{{ config.extra.site.nav_logo | default(value=config.extra.site.logo) }}" alt="logo" class="site-logo-img">
                 <span class="site-name">{{ config.author }}</span>
             </a>
         </div>
