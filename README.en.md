@@ -17,7 +17,7 @@
 
 | Site Name | Site Address |
 |:------:|:-----------------------|
-| Jiaxiang Wang | https://jiaxiang.wang |
+| Jiaxiang Wang Personal Homepage| https://www.jiaxiang.wang |
 
 
 ## ℹ️ Introduction
