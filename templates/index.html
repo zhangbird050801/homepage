@@ -2,7 +2,7 @@
 {% import "_macros.html" as macro %}
 
 {% block head %}
-    {{ macro::head_meta_original_title(_permalink = section.path, excerpt = section.description | default(value= section.title ~ " | " ~ config.description), type = 'website') }}
+    {{ macro::head_meta_original_title(_permalink = section.path, excerpt = section.description | default(value=config.description), type = 'website') }}
 {% endblock %}
 
 {% block content %}
