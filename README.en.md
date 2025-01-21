@@ -6,18 +6,18 @@
 
 [Preview](#-preview) | [Quick Start](#-quick-start) | [Discussion](#-discussion)
 
-[中文](./README.md) | [English](./README.en.md)
+[中文](https://github.com/iWangJiaxiang/Homepage-Creators/blob/main/README.md) | [English](https://github.com/iWangJiaxiang/Homepage-Creators/blob/main/README.en.md)
 
 </p>
 </div>
 
-[![preview](./screenshot.png)](https://jiaxiang.wang)
+[![preview](https://github.com/iWangJiaxiang/Homepage-Creators/raw/refs/heads/main/screenshot.png)](https://jiaxiang.wang)
 
 ## 🔥 Preview
 
 | Site Name | Site Address |
 |:------:|:-----------------------|
-| Jiaxiang Wang Personal Homepage| https://www.jiaxiang.wang |
+| Jiaxiang Wang Personal Homepage| [https://www.jiaxiang.wang](https://www.jiaxiang.wang) |
 
 
 ## ℹ️ Introduction

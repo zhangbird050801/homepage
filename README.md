@@ -6,18 +6,18 @@
 
 [主题预览](#-预览) | [快速上手](#-快速上手) | [加入讨论](#-讨论)
 
-[中文](./README.md) | [English](./README.en.md)
+[中文](https://github.com/iWangJiaxiang/Homepage-Creators/blob/main/README.md) | [English](https://github.com/iWangJiaxiang/Homepage-Creators/blob/main/README.en.md)
 
 </p>
 </div>
 
-[![preview](./screenshot.png)](https://jiaxiang.wang)
+[![preview](https://github.com/iWangJiaxiang/Homepage-Creators/raw/refs/heads/main/screenshot.png)](https://jiaxiang.wang)
 
 ## 🔥 预览
 
 | 站点名称 | 站点地址 |
 |:------:|:-----------------------|
-| 王嘉祥 个人主页 | https://www.jiaxiang.wang |
+| 王嘉祥 个人主页 | [https://www.jiaxiang.wang](https://www.jiaxiang.wang) |
 
 
 ## ℹ️ 简介
