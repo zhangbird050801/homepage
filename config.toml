@@ -27,7 +27,15 @@ start_year = 2024
 logo = "/img/logo.webp"
 # default to use logo value
 nav_logo = "/img/logo.webp"
-icp = "ICP备XXXXXXXX号"
+# 联系邮箱
+mail = "contact@example.com"
+# ICP 备案号
+compliance_icp = "ICP备XXXXXXXX号"
+# 公安备案号
+compliance_security = "公网安备0000000000号"
+# 公安备案链接
+compliance_security_link = "https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=0000000000"
+
 
 # umami 访问量统计
 [extra.analytics.umami]
@@ -47,7 +55,7 @@ js = "/path/to/script.js"
 [extra.nav.message]
 enable = true
 # support inline html
-text = "🎉 博客现已上线"
+text = "🎉 访问作者博客"
 url = "https://blog.jiaxiang.wang"
 
 [extra.nav.center]
@@ -61,8 +69,8 @@ menus = [
 
 [extra.nav.right]
 menus = [
-    { name = "访问博客", url = "https://blog.jiaxiang.wang", internal = false},
-    { name = "Github", url = "https://github.com/iWangJiaxiang", internal = false},
+    { name = "作者博客", url = "https://blog.jiaxiang.wang", internal = false},
+    { name = "作者 Github", url = "https://github.com/iWangJiaxiang", internal = false},
 ]
 
 
