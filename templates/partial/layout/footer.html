@@ -4,6 +4,9 @@
     <div class="footer-content need-padding">
       <span class="info inline-word">Copyright © <span class="inline-word" id="copyright-info">{% if start != current %}{{ start }} - {% endif %}{{ current }}</span>{{ config.author }} 保留所有权利。</span>
       <div class="info-group">
+        <a class="info" href="mailto:{{ config.extra.site.mail }}">联系邮箱：{{ config.extra.site.mail }}</a>
+      </div>
+      <div class="info-group">
         {% if config.extra.site.compliance_security and config.extra.site.compliance_security_link %}
         <a class="info" href="{{ config.extra.site.compliance_security_link }}" target="_blank">
           <img class="beian-icon" src="/img/beian.avif" style="vertical-align: middle; margin-right: 3px;">
