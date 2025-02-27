@@ -58,57 +58,6 @@ document.querySelector('.menu-list').addEventListener('wheel',(e)=>{
   e.preventDefault()
 })
 
-
-// 检查AVIF图片是否支持，并处理图片加载格式
-// 如不支持，则换成webp格式
-function checkAvif() {
-  // 从页面中提取第一个AVIF图片链接
-  function getFirstAvifUrl() {
-      const images = document.querySelectorAll('img');
-      for (let img of images) {
-        if (img.src.endsWith('.avif')) {
-          return img.src;
-        }
-      }
-      return null;
-    }
-    
-    // 检测浏览器是否支持AVIF格式
-    function supportsAvif(url) {
-      return new Promise(resolve => {
-        const avif = new Image();
-        avif.src = url;
-        avif.onload = () => {
-          resolve(true);
-        };
-        avif.onerror = () => {
-          resolve(false);
-        };
-      });
-    }
-    
-    // 替换图片URL中的avif为webp
-    function replaceAvifWithWebp() {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (img.src.endsWith('.avif')) {
-          console.log("Replacing AVIF with WebP for image:", img.src);
-          img.src = img.src.replace('.avif', '.webp');
-        }
-      });
-    }
-    
-    const firstAvifUrl = getFirstAvifUrl(); // 获取第一个AVIF图片链接
-    if (firstAvifUrl) {
-      // 使用第一个AVIF图片链接进行检测
-      supportsAvif(firstAvifUrl).then(supported => {
-        if (!supported) {
-          replaceAvifWithWebp();
-        }
-      });
-    }
-}
-
 var homepage = {
   //显示菜单
   showMenu: function() {
@@ -186,7 +135,3 @@ window.addEventListener('scroll',function(){
 })
 
 initNav()
-
-document.addEventListener('DOMContentLoaded', function () {
-  checkAvif()
-})
