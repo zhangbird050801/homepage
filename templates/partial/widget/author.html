@@ -10,7 +10,7 @@
       </p>
     </span>
     <div class="avatar-info">
-      <img loading="lazy" class="avatar-image" src="{{ value.avatar | safe }}">
+      {{ macro::img_progressive_loading_single_size(src=value.avatar, class="avatar-image") }}
       <span class="avatar-name">{{ value.name }}</span>
       <span class="avatar-title">{{ value.title }}</span>
     </div>
