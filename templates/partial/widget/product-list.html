@@ -10,7 +10,7 @@
       {% for item in value.items %}
       <div class="group-item">
         <a class="group-item-icon" href="{{ item.url | safe }}" target="_blank">
-          <img class="group-item-icon-img" src="{{ item.logo | safe }}" alt="product-icon" title="product-icon">
+          {{ macro::img_progressive_loading_single_size(src=item.logo, class="group-item-icon-img") }}
         </a>
         <div class="group-info-group">
           <div class="group-info">

@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="banner-pic">
-      <img class="banner-pic-img" src="{{ value.img | safe }}" alt="banner image">
+      {{ macro::img_progressive_loading_single_size(src=value.img, class="banner-pic-img") }}
     </div>
 </div>
 {% endmacro %}

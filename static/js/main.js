@@ -1,3 +1,32 @@
+// 获取具有特定 class 的兄弟节点，返回第一个
+function getSiblingNodesWithClass(element, className) {
+  const parent = element.parentNode;
+
+  // Iterate through the child nodes of the parent
+  for (let i = 0; i < parent.children.length; i++) {
+      const sibling = parent.children[i];
+      // Check if the sibling has the specified class and is not the original element
+      if (sibling !== element && sibling.classList.contains(className)) {
+          return sibling;
+      }
+  }
+
+  return null;
+}
+
+// 渐进加载图片
+window.progressiveLoad = function(element) {
+  if (!element) return;
+  // 隐藏缩略图
+  var sibing = getSiblingNodesWithClass(element, 'progressive-thumbnail')
+  if (sibing)
+      sibing.classList.add('loaded');
+  // 加载主图
+  element.classList.add('loaded');
+  // 去除模糊效果
+  element.parentNode.classList.add('loaded');
+}
+
 // 添加视差效果
 var image = document.getElementsByClassName('banner-pic-img');
 new simpleParallax(image, {
@@ -28,57 +57,6 @@ $('.menu-list').click(function () {
 document.querySelector('.menu-list').addEventListener('wheel',(e)=>{
   e.preventDefault()
 })
-
-
-// 检查AVIF图片是否支持，并处理图片加载格式
-// 如不支持，则换成webp格式
-function checkAvif() {
-  // 从页面中提取第一个AVIF图片链接
-  function getFirstAvifUrl() {
-      const images = document.querySelectorAll('img');
-      for (let img of images) {
-        if (img.src.endsWith('.avif')) {
-          return img.src;
-        }
-      }
-      return null;
-    }
-    
-    // 检测浏览器是否支持AVIF格式
-    function supportsAvif(url) {
-      return new Promise(resolve => {
-        const avif = new Image();
-        avif.src = url;
-        avif.onload = () => {
-          resolve(true);
-        };
-        avif.onerror = () => {
-          resolve(false);
-        };
-      });
-    }
-    
-    // 替换图片URL中的avif为webp
-    function replaceAvifWithWebp() {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (img.src.endsWith('.avif')) {
-          console.log("Replacing AVIF with WebP for image:", img.src);
-          img.src = img.src.replace('.avif', '.webp');
-        }
-      });
-    }
-    
-    const firstAvifUrl = getFirstAvifUrl(); // 获取第一个AVIF图片链接
-    if (firstAvifUrl) {
-      // 使用第一个AVIF图片链接进行检测
-      supportsAvif(firstAvifUrl).then(supported => {
-        if (!supported) {
-          replaceAvifWithWebp();
-        }
-      });
-    }
-}
 
 var homepage = {
   //显示菜单
@@ -157,7 +135,3 @@ window.addEventListener('scroll',function(){
 })
 
 initNav()
-
-document.addEventListener('DOMContentLoaded', function () {
-  checkAvif()
-})

@@ -15,6 +15,6 @@
         <span class="linkbotton-tips">{{ value.note | safe }}</span>
       </div>
     </div>
-    <img class="special-card-right" src="{{ value.img | safe }}"></img>
+    {{ macro::img_progressive_loading_single_size(src=value.img, class="special-card-right") }}
   </div>
 {% endmacro %}

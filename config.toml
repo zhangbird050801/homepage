@@ -73,6 +73,10 @@ menus = [
     { name = "作者 Github", url = "https://github.com/iWangJiaxiang", internal = false},
 ]
 
+# 其他设置
+[extra.other]
+# AVIF 图片优化，大幅降低图片尺寸
+avif_enable = true
 
 # 主页小组件 按顺序渲染
 [[extra.index.widgets]]

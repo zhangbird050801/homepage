@@ -9,7 +9,7 @@
       <div class="info-group">
         {% if config.extra.site.compliance_security and config.extra.site.compliance_security_link %}
         <a class="info" href="{{ config.extra.site.compliance_security_link }}" target="_blank">
-          <img class="beian-icon" src="/img/beian.avif" style="vertical-align: middle; margin-right: 3px;">
+          {{ macro::img_progressive_loading_single_size(src="/img/beian.webp", alt="beian", class="beian-icon", style="vertical-align: middle; margin-right: 3px;") }}
           {{ config.extra.site.compliance_security }}
         </a>
         {% endif %}
