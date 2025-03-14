@@ -426,6 +426,19 @@ span.linkbotton-tips {
     color: var(--heo-secondtext)
 }
 
+span.highlight {
+    background-image: -webkit-linear-gradient(241deg, #ea6044 39%, #dc5083 50%, #9a6df7 67%, #3f8def 81%);
+    background-image: linear-gradient(209deg, #ea6044 39%, #dc5083 50%, #9a6df7 67%, #3f8def 81%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+    color: transparent
+}
+
+span.subfont {
+    color: var(--heo-gray);
+}
+
 .special-card span.linkbotton-tips {
     color: var(--heo-white);
     opacity: .6
@@ -727,7 +740,7 @@ a.second-link:hover {
     border: var(--style-border-always);
     box-shadow: var(--heo-shadow-border);
     flex-wrap: wrap;
-    justify-content: space-around
+    justify-content: space-between
 }
 
 .avatar-discription-text {
@@ -736,11 +749,8 @@ a.second-link:hover {
     text-align: left;
     width: calc(100% - 330px);
     padding: 20px 40px;
-    background: #ffdd601d;
     border-radius: 12px;
     align-items: center;
-    border: var(--style-border-always);
-    border-color: var(--heo-orange)
 }
 
 .avatar-discription-text p {
