@@ -105,7 +105,8 @@ window.addEventListener('scroll', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   // 添加视差效果
-  var image = document.getElementsByClassName('banner-pic-img');
+  //var image = document.getElementsByClassName('progressive-content'); bug see: https://github.com/geosigno/simpleParallax.js/issues/64
+  var image = document.querySelectorAll('.banner-pic-img  .progressive-content');
   new simpleParallax(image, {
     orientation: 'up',
     scale: 1.2,
@@ -134,6 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.menu-list').addEventListener('wheel', (e) => {
     e.preventDefault()
   })
-});
 
-initNav()
+  initNav()
+});
