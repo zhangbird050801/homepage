@@ -1,0 +1,17 @@
+{
+    "short_name": "Homepage",
+    "name": "Homepage-Creators",
+    "icons": [
+      {
+        "src": "/img/logo.webp",
+        "type": "image/png",
+        "sizes": "96x96"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000"
+  }
+  
