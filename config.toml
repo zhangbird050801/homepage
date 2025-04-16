@@ -1,9 +1,9 @@
 # The URL the site will be built for
-base_url = "https://jiaxiang.wang"
+base_url = "https://zhangbird.pages.dev/"
 
 title = "个人主页"
 
-author = "王嘉祥"
+author = "birdy"
 
 description = "好奇、探索、创造。个人主页导航网站。"
 
@@ -56,7 +56,7 @@ js = "/path/to/script.js"
 enable = true
 # support inline html
 text = "🎉 访问作者博客"
-url = "https://blog.jiaxiang.wang"
+url = "https://www.birdyweb.top"
 
 [extra.nav.center]
 menus = [
@@ -64,13 +64,13 @@ menus = [
     { name = "主题", url = "主题", internal = true},
     { name = "博客", url = "博客", internal = true},
     { name = "媒体", url = "媒体", internal = true},
-    { name = "项目", url = "https://blog.jiaxiang.wang/tags/project/", internal = false},
+    { name = "项目", url = "https://github.com/zhangbird050801", internal = false},
 ]
 
 [extra.nav.right]
 menus = [
-    { name = "作者博客", url = "https://blog.jiaxiang.wang", internal = false},
-    { name = "作者 Github", url = "https://github.com/iWangJiaxiang", internal = false},
+    { name = "作者博客", url = "https://www.birdyweb.top", internal = false},
+    { name = "作者 Github", url = "https://github.com/zhangbird050801", internal = false},
 ]
 
 # 其他设置
@@ -82,24 +82,24 @@ avif_enable = true
 [[extra.index.widgets]]
 type = "header"
 [extra.index.widgets.value]
-title_1 = "王嘉祥"
-title_2 = "Jiaxiang Wang"
+title_1 = "birdy"
+title_2 = "zxy"
 bio_1 = "专注于科技、音乐等领域<span class=\"inline-word\">跨界创新</span>"
 bio_2 = "分享经验与见解"
-about_url = "https://blog.jiaxiang.wang/about/"
+about_url = "https://www.birdyweb.top/about/"
 cover = "/img/logo.svg"
 [[extra.index.widgets.value.links]]
 class_icon = " icon-github-line"
-url = "https://github.com/iWangJiaxiang"
+url = "https://github.com/zhangbird050801"
 [[extra.index.widgets.value.links]]
 class_icon = " icon-github-line"
-url = "https://github.com/iWangJiaxiang"
+url = "https://github.com/zhangbird050801"
 
 
 [[extra.index.widgets]]
 type = "author"
 [extra.index.widgets.value]
-name = "王嘉祥"
+name = "birdy"
 avatar = "/img/logo01.webp"
 title = "Team leader, architect,"
 # title = "Team leader, architect, senior engineer, singer songwriter, creator. Engaging in HPC, Cloud, AI and more."
